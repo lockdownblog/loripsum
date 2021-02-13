@@ -27,28 +27,36 @@ class ParagraphLength(Enum):
 
 
 def _build_url(
-    paragraphs: int, length: ParagraphLength = ParagraphLength.short, **kwargs
+    paragraphs: int,
+        length: ParagraphLength = ParagraphLength.short, **kwargs
 ):
-    parts = [str(paragraphs), length.name]
+    parts = [
+        str(paragraphs)
+        , length.name]
 
     parts.extend(
         sorted(
             [
                 arg
-                for arg, enabled in kwargs.items()
+                for arg, enabled
+                in kwargs.items()
                 if (arg in VALID_KWARGS) and enabled
             ]
         )
     )
 
-    return BASE_URL + ("/".join(parts))
+    return BASE_URL + \
+           ("/".join(parts))
 
 
 def get_text(
-    paragraphs: int, length: ParagraphLength = ParagraphLength.short, **kwargs
+    paragraphs: int,
+        length: ParagraphLength = ParagraphLength.short, **kwargs
 ):
     url = _build_url(paragraphs, length, **kwargs)
 
-    response = requests.get(url)
+    response = requests.get(
+        url
+        )
 
     return response.text
