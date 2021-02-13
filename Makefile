@@ -32,3 +32,8 @@ style:
 lint:
 	$(POETRY_RUN) isort $(SOURCES_FOLDER) --check-only
 	$(POETRY_RUN) black $(SOURCE_FILES) --check
+
+test:
+	PYTHONPATH=. $(POETRY_RUN) pytest -vv test
+
+.PHONY: test
