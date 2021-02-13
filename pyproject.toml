@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "loripsum"
-version = "0.0.0"
+version = "0.0.1"
 description = "A Python client for lopripsum.net"
 authors = ["Antonio Feregrino <antonio.feregrino@gmail.com>"]
 license = "MIT"
