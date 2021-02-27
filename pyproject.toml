@@ -5,6 +5,9 @@ description = "A Python client for lopripsum.net"
 authors = ["Antonio Feregrino <antonio.feregrino@gmail.com>"]
 license = "MIT"
 
+[tool.poetry.scripts]
+loripsum = 'loripsum.__main__:main'
+
 [tool.poetry.dependencies]
 click = "^7.1.2"
 python = "^3.8"
