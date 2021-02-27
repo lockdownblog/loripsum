@@ -36,4 +36,7 @@ lint:
 test-unit:
 	PYTHONPATH=. $(POETRY_RUN) pytest -vv test/unit
 
+test-end-to-end:
+	PYTHONPATH=. $(POETRY_RUN) pytest -vv test/end_to_end
+
 .PHONY: test

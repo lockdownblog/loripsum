@@ -1,7 +1,7 @@
-import pytest
 from unittest.mock import patch
 from click.testing import CliRunner
 from loripsum.__main__ import main
+
 
 def test_main():
     runner = CliRunner()
