@@ -35,10 +35,15 @@ jobs:
           source $HOME/.poetry/env
           make lint
 
-      - name: Test
+      - name: Unit tests
         run: |
           source $HOME/.poetry/env
-          make test
+          make test-unit
+
+      - name: End-to-end tests
+        run: |
+          source $HOME/.poetry/env
+          make test-end-to-end
 
       - name: Build package
         run: |
